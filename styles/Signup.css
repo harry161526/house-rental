@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+@import url('../styles/navbar.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image:url('https://image.freepik.com/free-vector/real-estate-searching_52683-46407.jpg');
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+}
+.authentication {
+    width: 100%;
+}
+.authentication:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background-color: crimson;
+    top: 0;
+    left: -25%;
+    opacity: 0.7;
+}
+.form {
+    margin-top: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 290px;
+    min-height: 250px;
+    padding:20px;
+    background-color: white;
+    box-shadow: 0px 15px 50px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+.form h2 {
+    color: #777;
+    margin: 15px 0 40px;
+    padding: 0;
+}
+.form p:first-of-type {
+    font-size: 15px;
+    color: crimson;
+    margin-top: -15px;
+   
+}
+.form .inputbox {
+    position: relative;
+    margin: 14px 0px;
+    border: none;
+    outline-width: 0px;
+}
+.form .inputbox input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #777;
+    outline: none;
+    padding: 10px;
+    padding-left: 35px;
+    color: #777;
+    box-sizing: border-box;
+    font-size: 14px;    
+    outline: none;
+    outline-width: 0px;
+}
+
+.form .inputbox input:focus,
+.form .inputbox input:valid {
+    border-bottom: 2px solid crimson;
+}
+.form .inputbox .fas {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: #777;
+    font-size: 18px;
+}
+.form .inputbox .far {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: #777;
+    font-size: 18px;
+}
+.form .inputbox input[type="submit"] {
+    border: none;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border : 1px solid crimson;
+    
+}
+.form .inputbox input[type="submit"]:hover {
+    background: none;
+    color: crimson;
+}
+
+.form a:hover {
+    color: crimson;
+}
+.form p {
+    font-size: 14px;
+    display: inline-block;
+}
+.form p a {
+    color: crimson;
+    cursor: pointer;
+}
+.theme
+{
+    width: 55%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  
+}
+.theme p {
+    font-size: 70px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+.theme p span {
+    margin: 10px 0px;
+    color: white;
+    font-family:'Trispace', sans-serif;
+    font-weight: 800;
+}
+.theme p span span {
+    color: crimson;
+}
+
+
+@media (min-width : 1201px) {
+    .menu-btn {
+        display: none;
+    }
+    .authentication {
+        width: 50%;
+    }
+    .theme {
+        display: flex;
+    }
+    .form {
+        margin-top: 30px;
+        width: 360px;
+        left: 29%;
+        padding: 30px 35px;
+    }
+    .form p a {
+        font-size: 14px;
+    }
+    
+    .form .inputbox {
+        margin: 25px 0px;
+    }
+    .theme p {
+        font-size: 51px;
+    }
+}
+@media (min-width : 1025px) and (max-width : 1200px) {
+    .menu-btn {
+        display: none;
+    }
+   
+    .navbar .menu li {
+        display: inline;
+    }
+    .authentication {
+        width: 45%;
+    }
+    .form {
+        margin-top: 30px;
+        width: 350px;
+        left: 28%;
+        padding: 25px 30px;
+    }
+    .form .inputbox {
+        margin: 25px 0px;
+    }
+    .form p a {
+        font-size: 14px;
+    }
+    .theme {
+        display: flex;
+    }
+    .theme p {
+        font-size: 45px;
+    }
+}
+@media (min-width : 769px) and (max-width : 1024px){
+    .max-width {
+        padding: 0px 50px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .authentication {
+        width: 50%;
+    }
+    .form {
+       margin-top: 34px;
+        width: 320px;
+        left: 26%;
+        padding: 30px;
+    }
+    .form .inputbox {
+        margin: 17px 0px;
+    }
+    .form p a {
+        font-size: 15px;
+    }
+    .theme {
+        display: flex;    
+    }
+    .theme p {
+        font-size: 35px;
+    }
+    
+}
+/* for tablet's and ipad's*/
+
+@media (min-width : 481px) and (max-width : 768px) {
+   
+    .authentication {
+        width: 70%;
+    }
+    .authentication:before {
+        left: -20%;
+    }
+    .form {
+        margin-top: 25px;
+        width: 310px;
+        left: 45%;
+        padding: 30px 25px;
+        
+    }
+    .form p a {
+        font-size: 14px;
+    }
+}
+
+

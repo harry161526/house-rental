@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;500&display=swap');
+@import url('./navbar.css');
+@import url('./footer.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* navbar-local styling */
+.navbar-local {
+    background: none;
+    box-shadow: none;
+}
+.navbar-local.sticky {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.navbar-local .logo a {
+    color: #fff;
+}
+.navbar-local.sticky .logo a {
+    color: crimson;
+}
+.navbar-local .logo a:hover {
+    color: rgb(233, 39, 78);   
+}
+.navbar-local .menu li a {
+    color: #fff;
+}
+.navbar-local.sticky .menu li a {
+    color: crimson;
+}
+.navbar-local .menu li a:hover {
+    color: rgb(233, 39, 78);   
+}
+
+
+/* home section styling */
+
+.home {
+    display: flex;
+    background: url("https://images.pexels.com/photos/3075974/pexels-photo-3075974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    min-height: 500px;
+    color: #fff;
+    font-family: 'Ubuntu',sans-serif;
+}
+.home .max-width {
+    margin : auto 0 auto 20px;
+}
+.home .content .text-1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.home .content .text-1 span {
+    color: crimson;
+}
+.home .content .text-2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.home .content .text-3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.home .content a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    margin-top: 20px;
+    border-radius: 6px;
+    background-color: crimson;
+    font-weight: 500;
+    border : 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .content a:hover {
+    color: crimson;
+    background : none;
+}
+.house_types {
+    padding : 80px 0px;
+    font-family: 'Poppins',sans-serif;
+}
+.house_types h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.house_types .max_width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.house_types .house {
+    width: 90%;
+    max-width: 400px;
+    height: 350px;
+    border: 1px solid rgb(206, 206, 206);
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 1px 3px 4px #ccc;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.house_types .house .house_img {
+    height: 75%;
+    width: 100%;
+    top: 0%;
+}
+.house_types .house .house_img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+}
+.house_types .house .house_content {
+    height: 25%;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+.house_types .house .house_content h2 {
+    font-weight: 500;
+}
+.house_types .house .house_content p {
+    font-weight: 300;
+}
+/* statistical data part */
+.stats_max_width {
+    width: 100%;
+    padding: 60px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family : 'Poppins',sans-serif;
+    border-top: 1px solid rgb(245, 242, 242);
+}
+.stats_max_width .statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.stats_max_width .statistics h2 {
+    font-size: 1.3rem;
+    vertical-align: top;
+}
+.stats_max_width .statistics p {
+    font-size: 0.8rem;
+}
+.stats_max_width .statistics p {
+    color: grey;
+}
+.start_max_width {
+    width: 100%; 
+    padding: 1.8rem 0.5rem;
+    font-family: 'poppins',sans-serif;   
+    background: #f4f8f7;
+}
+.start_max_width .start_title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.start_max_width .start_steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stepscard {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    max-height: 650px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    margin: 1rem 0;
+}
+.stepscard .imgbox {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    max-width: 500px;
+    max-height: 400px;
+    background-color: #fff;
+}
+.stepscard .imgbox img {
+    width: 100%;
+    height: 100%;
+}
+.stepscard .stepscard_content {
+    width: 80%;
+    max-width: 500px;
+    padding: 0.1rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.stepscard .stepscard_content h2 {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+.stepscard .stepscard_content p {
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+}
+.stepscard .stepscard_content a {
+    padding: 0.5rem 1rem;
+    background: #0000ff;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 2px solid #0000ff;
+    border-radius: 0.7rem;
+    margin-top: 10px;
+}
+.stepscard .stepscard_content a:hover {
+    background: none;
+    color: #0000ff;
+}
+/* footer styling start */
+
+/* responsive media queries */
+@media (min-width : 1301px) {
+    .max-width {
+        padding: 0 3rem;
+    }
+    .home .max-width {
+        margin-left: 3rem;
+    }
+    
+    .home .content .text-1 {
+        font-size: 3rem;    
+    }
+    .home .content .text-2,
+    .home .content .text-3 {
+        font-size: 1.5rem;    
+    }
+    .home .content a {
+        font-size: 22px;
+        padding: 9px 18px;
+    }
+    .house_types {
+        padding: 40px;
+    }
+    .house_types .max_width {
+        flex-direction: row;
+    }
+    .house_types .house {
+        width: 33%;
+        height: 380px;
+        margin: 0 0.6rem;
+    }
+    .stats_max_width .statistics h2 {
+        font-size: 2.4rem;
+    }
+    .stats_max_width .statistics p {
+        font-size: 1.9rem;
+    }
+    .start_max_width {
+        padding : 2.6rem 1.1rem;
+    }
+    .stepscard {
+        padding: 1.3rem 1rem;
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1700px;
+    }
+    .stepscard .imgbox {
+        height: 100%;
+        width: auto;
+    }
+    .stepscard .stepscard_content {
+        width: auto;
+        padding: 0.4rem;
+    }
+    .stepscard .stepscard_content h2 {
+        font-size: 1.4rem;
+    }
+    .stepscard .stepscard_content p {
+        font-size: 1.2rem;
+    }
+}
+    
+@media (min-width : 1025px) and (max-width : 1300px) {
+    .max-width {
+        padding: 0px 40px;
+    }
+    .home .max-width {
+        margin-left: 50px;
+    }
+    
+    .home .content .text-1 {
+        font-size: 2.8rem;    
+    }
+    .home .content .text-2,
+    .home .content .text-3 {
+        font-size: 1.4rem;    
+    }
+    .home .content a {
+        font-size: 22px;
+        padding: 9px 18px;
+    }
+    .house_types {
+        padding: 60px 10px;
+    }
+    .house_types .max_width {
+        flex-direction: row;
+    }
+    .house_types .house {
+        margin: 0 0.5rem;
+    }
+    .stats_max_width {
+        padding: 45px 50px;
+    }
+    .stats_max_width .statistics h2 {
+        font-size: 2.1rem;
+    }
+    .stats_max_width .statistics p {
+        color: grey;
+        color: 1.6rem;
+    }
+    .start_max_width {
+        padding : 2.5rem 0.9rem;
+    }
+    .stepscard {
+        padding: 1.2rem 0.9rem;
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1700px;
+    }
+    .stepscard .imgbox {
+        
+        height: 100%;
+    }
+    .stepscard .stepscard_content {
+       
+        padding: 0.3rem;
+    }
+    .start_max_width .start_steps .stepscard .stepscard_content h2 {
+        font-size: 1.5rem;
+    }
+    .stepscard .stepscard_content p {
+        font-size: 1.3rem;
+    }
+   
+}
+@media (min-width : 769px) and (max-width : 1024px) {
+    .max-width {
+        padding: 0 2rem;
+    }
+    .home .max-width {
+        margin-left: 40px;
+    }
+    .home .content .text-1 {
+        font-size: 2.6rem;    
+    }
+    .home .content .text-2,
+    .home .content .text-3 {
+        font-size: 1.3rem;    
+    }
+    .home .content a {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+    .house_types {
+        padding: 40px 10px;
+    }
+    .house_types .max_width {
+        flex-direction: row;    
+    }
+    .house_types .house {
+        width: 33%;
+        height: 400px;
+        margin: 0 0.3rem;
+    }
+    .stats_max_width {
+        padding: 40px 40px;
+    }
+    .stats_max_width .statistics h2 {
+        font-size: 1.7rem;
+    }
+    .stats_max_width .statistics p {
+        color: grey;
+        color: 1.2rem;
+    }
+    .start_max_width {
+        padding : 2.5rem 0.9rem;
+    }
+    .stepscard {
+        padding: 1rem 0.7rem;
+        flex-direction: row;
+        max-width: 1700px;
+        justify-content: space-between;
+    }
+    .stepscard .imgbox {
+        width: auto;
+    }
+    .stepscard .stepscard_content {
+        width: auto;
+        padding: 0.3rem;
+    }
+    .stepscard .stepscard_content h2 {
+        font-size: 1.5rem;
+    }
+    .stepscard .stepscard_content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width : 481px) and (max-width : 768px) {
+    .max-width {
+        padding: 0px 20px;
+    }
+    .home .max-width {
+        margin-left: 30px;
+    }
+    .home .content .text-1 {
+        font-size: 2.3rem;    
+    }
+    .home .content .text-2,
+    .home .content .text-3 {
+        font-size: 1.2rem;    
+    }
+    .home .content a {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
+    .house_types {
+        padding: 60px 0px;
+    }
+    .house_types .max_width {
+        flex-direction: column;
+        align-items: center;
+    }
+    .house_types .house {
+        width: 350px;
+        height: 350px;
+        margin: 15px 0px;
+    }
+    .house_types .house .house_content {
+        align-items: center;
+        padding: 2px 8px;
+        font-size: 0.7;
+    }
+    .stats_max_width {
+        padding: 30px 20px;
+    }
+    .stats_max_width .statistics h2 {
+        font-size: 1.5rem;
+    }
+    .stats_max_width .statistics p {
+        font-size: 1rem;
+    }
+    .start_max_width {
+        padding : 2.4rem 0.7rem;
+    }
+    
+    
+    
+}

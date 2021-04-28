@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('./navbar.css');
+@import url('./footer.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+}
+.navbar-local .logo a i {
+    align-self: center;
+    height: 100%;
+}
+.background {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('https://images.pexels.com/photos/1000985/pexels-photo-1000985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: left 0% top 0%;
+}
+.about-us {
+    padding: 2rem 3rem;
+    font-family: 'Playfair',sans-serif;
+}
+.about-us h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    
+}
+.about-us p {
+    font-size: 1.3rem;
+    font-family: inherit;
+    font-weight: 200;
+    line-height: 2.2rem;
+    color: rgba(0,0,0,0.7);
+}
+.vision {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 0;
+    background: #e4e2e2;
+    font-family: 'Playfair',sans-serif;
+}
+.vision h1 {
+    font-size: 4rem;
+    font-family: inherit;
+    color: rgba(0,0,0,0.7);
+}
+.vision p {
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.6);
+}
+.leadership {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.leadership h1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.leadership h1::before,
+.leadership h1::after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+.leadership h1::before {
+    background-color: white;
+    height: 110%;
+    z-index: -1;
+    left: -10px;
+    right: -10px;
+    top: -1px;
+}
+.leadership h1::after {
+    background-color:crimson;
+    width: 90vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -2;
+    height: 100%;
+}
+.leadership_description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.leader {
+    position: relative;
+    width: 350px;
+    max-width: 370px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin: 1rem 0;
+    border: 1px solid #ccc;   
+    box-shadow: 0px 4px 8px 1px rgb(223, 222, 222);
+    border-radius: 10px;
+}
+.leader:hover {
+    cursor: pointer;  
+}
+.leader .imgbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.leader .imgbox img {
+    max-width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.leader .leader_description {
+    position: absolute;
+    top: 80%;
+    text-align: center;
+}
+.leader .leader_description h3 {
+    margin: 0.2rem 0;
+}
+.values {
+    width: 100%;
+    background-color: crimson;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0;
+    min-height: 350px;
+    padding: 3rem 0;
+    font-family: 'Playfair',sans-serif;
+}
+.values h1 {
+    margin: 2rem;
+    color: white;
+    font-size: 4rem;
+    font-family: inherit;
+}
+.values .values_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.value {
+    width: 350px;
+    max-width: 380px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0.2rem;
+    color: white;
+    vertical-align: top;
+}
+
+.value .icon-color {
+    color: white;
+    font-size: 6rem;
+}
+.value p {
+    text-align: center;
+}
+
+@media (min-width : 1201px) {
+    .leader {
+        margin:1rem 0.8rem;
+    }
+}
+@media (min-width : 1025px) and (max-width : 1200px) {
+    
+}
+@media (min-width : 769px) and (max-width : 1024px) {
+   
+}
+@media (min-width : 481px) and (max-width : 768px) {
+
+}
+
+@media (min-width : 769px) {
+    .leadership_description {
+        flex-direction: row;
+    }
+    .leader {
+        width : 32%;
+        margin: 0 0.3rem 0 0.3rem;
+    }
+    .values .values_description {
+        flex-direction: row;
+    }
+    .value {
+        width: 33%;
+    }
+}
+@media (min-width : 481px) {
+  
+}

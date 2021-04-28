@@ -1,0 +1,55 @@
+    
+.theme
+{
+    border: 2px solid black;
+    width: 55%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  
+}
+.theme .card {
+    left: 25%;
+    margin-left: 33%;
+    width: 480px;
+    min-height: 550px;
+    height: 100vh;
+    padding: 50px 30px;
+    background-color: crimson;
+    font-size: 35px;
+    color: black;
+    font-family: 'Grandstander',cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.theme .card:hover {
+    background-color: linear-gradient(160deg,rgba(160, 151, 151, 0.5), rgba(220,60,60,1));
+}
+.theme .card p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start center;
+    margin: auto;
+    font-weight: 900;
+}
+.theme .card p span {
+    margin: 13px 0px;
+}
+.theme .card a {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 15px;
+    color: crimson;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.theme .card a:hover {
+    background: none;
+    color: white;
+}

@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('./footer.css');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.background {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('https://media.gettyimages.com/photos/modern-living-room-with-dining-room-picture-id1089808216?s=2048x2048');
+    background-size: cover;
+    background-position: left 50% top 40%;
+}
+main {
+    padding: 2rem 1rem;
+    font-family: 'Playfair',sans-serif;
+}
+.host_steps,
+.host_controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:3rem;
+    min-height: 400px;
+   
+}
+.host_steps h1,
+.host_controls h1 {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0;
+    padding-top: 1rem;
+    color: rgba(0,0,0,0.8);   
+    z-index: -1; 
+}
+.host_steps h1::before,
+.host_steps h1::after,
+.host_controls h1::before,
+.host_controls h1::after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+
+.host_steps h1::before,
+.host_controls h1::before {
+    content: '';
+    width: 100px;
+    height : 2px;
+    display: flex;
+    top: -5px;
+    left: 35%;
+    background: rgba(0,0,0,0.8);
+    border-top: 1px solid black;
+    z-index: 1;
+}
+.host_controls h1::before  {
+    left: 33%;
+}
+.host_steps .steps_description,
+.host_controls .controls_description {
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+.host_step,
+.host_control {
+    position: relative;
+    width: 90%;
+    padding: 1rem 1.3rem;
+    height: 250px;
+    max-height: 250px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: inherit;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 0.5rem 0.1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    color: rgba(0,0,0,0.8); 
+}
+.host_step:hover::before,
+.host_step:hover::after,
+.host_control:hover::before,
+.host_control:hover::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+}
+.host_step::before,
+.host_control::before {
+    transform: scale(0,1);
+    transition: transform ease-in-out 0.4s;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.host_step::after,
+.host_control::after {
+    transform: scale(1,0);
+    transition: transform ease-in-out 0.4s;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+.host_step:hover::before,
+.host_control:hover::before {
+    transform: scale(1.05,1);  
+}
+.host_step:hover::after,
+.host_control:hover::after {
+    transform: scale(1,1.07);   
+}
+.host_step:hover,
+.host_step:active,
+.host_control:hover,
+.host_control:active {
+    background-color: crimson;
+    color: #fff;
+}
+.host_step h2,
+.host_control h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+   
+}
+.host_step p,
+.host_control p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.host_step.last_step,
+.host_control.last_step {
+    border-right: none;
+}
+.testimonials {
+    width: 100%;
+    height: 750px;
+    background: linear-gradient(rgba(0,0,255,0.2),rgba(0,0,255,0.4)), url('https://cdn.pixabay.com/photo/2017/08/29/02/12/technology-2691931_960_720.jpg');
+    background-size: cover;
+    padding: 1rem;
+}
+.testimonials h1 {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.carousel {
+    height: 600px;
+    width: 100%;
+}
+.carousel .carousel-item {
+    width: 320px;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+}
+.carousel-item .imgbox {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.carousel-item .imgbox img {
+    width: 100%;
+    height: 100%;
+}
+.carousel-item .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel-item .content p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+.carousel-item .content .user_info {
+    margin-top: 20px;
+    text-align: center;
+}
+.carousel-item .content .user_info p {
+    font-size: 1.1rem;
+    color: crimson;
+}
+.carousel-item .content .user_info span {
+    font-size: 0.9rem;
+    color: rgba(219, 20, 60,0.8);
+}
+.ready_host {
+    position: relative;
+    margin-top: 5rem;
+    max-height: 400px;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(rgba(153, 151, 151,0.3),rgba(153, 151, 151,0.3)),url('https://cdn.pixabay.com/photo/2015/05/31/10/58/golden-791072_960_720.jpg') center/cover no-repeat;  
+}
+.ready_host h4 {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-weight: 600;
+    color: crimson;
+    font-size: 2.5rem;
+}
+.ready_host a {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    color: crimson;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid crimson;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+.ready_host a:hover {
+    background: #fff;
+}
+@media (min-width : 481px) {
+    .host_controls {
+        margin: 2rem 0;
+    }
+    .host_steps .steps_description .host_step,
+    .host_control {
+        width: 70%;
+    }
+    .host_controls h1::before {
+        left: 35%;
+        width: 150px;
+    }
+    .testimonials h1 {
+        font-size: 2rem;
+    }
+    .carousel .carousel-item {
+        height: 400px;
+    }
+    .carousel-item .content p {
+        font-size: 1rem;
+    }
+    .ready_host h4 {
+        font-size: 3rem;
+    }
+}
+@media (min-width : 769px) {
+    .host_steps .steps_description,
+    .host_controls .controls_description {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .host_step,
+    .host_control {
+        border-bottom: none;
+        border-right: 1px solid #dbdbdb;
+        height: 260px;
+    }
+    .host_controls {
+        padding: 0 1rem;
+    }
+    .testimonials h1 {
+        font-size: 3rem;
+    }
+    .carousel-item .content p {
+        font-size: 1.2rem;
+    }
+    
+}
