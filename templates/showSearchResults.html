@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+    <script src="https://use.fontawesome.com/03b769b230.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../styles/showresults.css">
+
+</head>
+<body>
+    <div class="navbar-local">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    <p>GetHome</p>
+                 </a>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./findhome.html">Find Home</a></li>
+                <li><a href="./aboutus.html">Aboutus</a></li>
+                <li><a href="./host.html">Host</a></li>
+                <li><a href="./Login.html">Login</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="searchcontainer">
+        <div class="searchwrapper">   
+            <input type="text" name="searchbox" />
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="results-container">
+            <div class="resultswrapper">
+                <div class="titlewrapper">
+                    <h4>Results for your search madhapur</h4>
+                    <h5>30 houses found</h5>
+                </div>
+               <div class="resultscontainer">
+                    <div class="housecard">
+                        <div class="imgbox">
+                            <img src="../images/demo_home.jpg" alt="demo home" />
+                        </div>
+                        <div class="contentbox">
+                            <h4>1BHK apartment in madhaput</h4>
+                            <h5>price : 10,000</h5>
+                            <p>address goes here.......</p>
+                            <p>Area : 1600 sq.ft</p>
+                        </div>
+                    </div>
+                    <div class="housecard">
+                        <div class="imgbox">
+                            <img src="../images/demo_home.jpg" alt="demo home" />
+                        </div>
+                        <div class="contentbox">
+                            <h4>1BHK apartment in madhaput</h4>
+                            <h5>price : 10,000</h5>
+                            <p>address goes here.......</p>
+                            <p>Area : 1600 sq.ft</p>
+                        </div>
+                    </div>
+                    <div class="housecard">
+                        <div class="imgbox">
+                            <img src="../images/demo_home.jpg" alt="demo home" />
+                        </div>
+                        <div class="contentbox">
+                            <h4>1BHK apartment in madhaput</h4>
+                            <h5>price : 10,000</h5>
+                            <p>address goes here.......</p>
+                            <p>Area : 1600 sq.ft</p>
+                        </div>
+                    </div>
+                    <div class="housecard">
+                        <div class="imgbox">
+                            <img src="../images/demo_home.jpg" alt="demo home" />
+                        </div>
+                        <div class="contentbox">
+                            <h4>1BHK apartment in madhaput</h4>
+                            <h5>price : 10,000</h5>
+                            <p>address goes here.......</p>
+                            <p>Area : 1600 sq.ft</p>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            <div class="mapwrapper">
+                <div id="mapid"></div>
+            </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin="">
+    </script>
+    <script>
+        var mymap = L.map('mapid').setView([14.2217557,79.135305], 12);
+        const attribution = '&copy; <a href="www.google.com">openstreetmap</a>';
+       const tileurl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+       const tile = L.tileLayer(tileurl,{attribution});
+       tile.addTo(mymap);
+       L.marker([14.2217557,79.135305]).addTo(mymap);
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+@import url('./navbar.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.navbar-local {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.main-header-post {
+    position: relative;
+/* 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+    margin-top: 65px;
+    height: 100%;
+    min-height: calc(100vh - 65px);
+    padding-top: 2rem;
+}
+.image-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 50%;
+    min-width: 300px;
+    height: 100vh;
+   
+}
+.form-section {
+    position: absolute;
+    left: calc(100vw-calc(100vw - 350px));
+
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.form-section .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid rgba(204, 204, 204, 0.7);
+    border-radius: 8px;
+    background-color: rgba(204, 204, 204, 0.1);
+    padding: 1rem 0.5rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 30px 0px;
+}
+.input-group {
+    width: 80%;
+    margin: 0.3rem 0;
+    padding: 0.2rem;
+}
+.label {
+    font-size: 1.1rem;
+    margin-left: 5px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+}
+input[type='radio'] {
+    margin: 0.4rem;
+}
+input[type='submit'] {
+    cursor: pointer;
+}
+.input-element {
+    margin: 0.3rem;
+    padding: 0.6rem 0.8rem ;
+    outline: none;
+    border: 1px solid rgba(204, 204, 204, 0.7);
+    width: 100%;
+    max-width: 350px;
+    border-radius: 4px;
+}
+.wrapper {
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 2rem 0;
+    padding: 1rem;
+    
+    background-color: rgba(204, 204, 204, 0.2);
+    
+}
+.wrapper h3 {
+    text-align: center;
+}
+@media(min-width : 769px)
+{
+    .image-section {
+        display: flex;
+    }
+}

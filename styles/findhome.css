@@ -11,7 +11,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0.8rem 0rem;
+
     overflow-x : hidden;
 }
 .header-section {
@@ -136,10 +136,7 @@ input[type='submit'] {
     transition: 0.3s ease-in-out;
     overflow-y: hidden;
 }
-.swiper-slide:hover .imgbox {
-    /* top: -5%;
-    left: 8%; */
-}
+
 .swiper-slide .imgbox img {
     position: absolute;
     top: 2%;
