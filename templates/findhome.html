@@ -38,7 +38,7 @@
     </div>
     <div class="header-section">
         <div class="overlay"></div>
-        <form class="form">
+        <form class="form" onsubmit="redirect(event)">
             <select>
                 <option>Andhra Pradesh</option>
                 <option>Telangana</option>
@@ -322,6 +322,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        function redirect(event) {
+            console.log('entered...')
+            event.preventDefault();
+            window.location.href="./showSearchResults.html";
+        }
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
