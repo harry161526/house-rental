@@ -41,13 +41,20 @@
                     <h3>House Details</h3>
                     <div class="input-group">
                         <p class="label">Type of House</p>
-                        <input  type="radio" name="houseType" value="Independent House" required>Independent House<br>
-                        <input  type="radio" name="houseType" value="Room" required>Room<br>
-                        <input  type="radio" name="houseType" value="Apartment" required>Apartment<br>
+                        <select name="house">
+                            <option>Independent House</option>
+                            <option>Pent House</option>
+                            <option>Romm</option>
+                            <option>Apartment</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <label for="houseName" class="label">House Name</label><br>
                         <input class="input-element" type="text" name="houseName" placeholder="optional..."> 
+                    </div>
+                    <div class="input-group">
+                        <label for="houseprice" class="label">House Price</label><br>
+                        <input class="input-element" type="number" name="houseprice"  > 
                     </div>
                     <div class="input-group">
                         <label for="housearea" class="label">House Area (in sq.ft)</label><br>
@@ -115,35 +122,39 @@
                     <h3>House Facilities</h3>
                     <div class="input-group">
                         <p class="label">No of Bedrooms</p>
-                        <input  type="radio" name="bedroomcount" value="1" required>One<br>
-                        <input  type="radio" name="bedroomcount" value="2" required>Two<br>
-                        <input  type="radio" name="bedroomcount" value="3" required>Three<br>
-                        <input  type="radio" name="bedroomcount" value="4" required>Four
+                       <select>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                       </select>
                     </div>
                     <div class="input-group">
                         <p class="label">No of Bathrooms</p>
-                        <input  type="radio" name="bathroomcount" value="1" required>One<br>
-                        <input  type="radio" name="bathroomcount" value="2" required>Two<br>
-                    </div>
-                    <div class="input-group">
-                        <p class="label">No of Kitchens</p>
-                        <input  type="radio" name="kitchencount" value="1" required>One<br>
-                        <input  type="radio" name="kitchencount" value="2" required>Two<br>
+                        <select>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <p class="label">Is Balcony available ?</p>
-                        <input  type="radio" name="balcony" value="true" required>Yes<br>
-                        <input  type="radio" name="balcony" value="false" required>No<br>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <p class="label">Is Parking available for two wheeler?</p>
-                        <input  type="radio" name="parking" value="true" required>Yes<br>
-                        <input  type="radio" name="parking" value="false" required>No<br>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <p class="label">Is Parking available for four wheeler(upto car only)?</p>
-                        <input  type="radio" name="parking" value="true" required>Yes<br>
-                        <input  type="radio" name="parking" value="false" required>No<br>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
                 </div>
                 
