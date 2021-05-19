@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('../styles/navbar.css');
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .navbar-local {
+            position: fixed;
+            top:0;
+            left: 0;
+        }
+        .main-header-post {
+            position: relative;
+        /* 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; */
+            margin-top: 65px;
+            height: 100%;
+            min-height: calc(100vh - 65px);
+            padding-top: 2rem;
+        }
+        .image-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 50%;
+            min-width: 300px;
+            height: 100vh;
+        
+        }
+        .form-section {
+            position: absolute;
+            left: calc(100vw-calc(100vw - 350px));
+
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        .form-section .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            border-radius: 8px;
+            background-color: rgba(204, 204, 204, 0.1);
+            padding: 1rem 0.5rem;
+            color: rgba(0, 0, 0, 0.8);
+            margin: 30px 0px;
+        }
+        select {
+            width: 200px;
+            padding: 0.5rem 0.7rem;
+            outline: none;
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            background: #fff;
+            margin-left: 5px;
+        }
+        .input-group {
+            width: 80%;
+            margin: 0.3rem 0;
+            padding: 0.2rem;
+        }
+        .label {
+            font-size: 1.1rem;
+            margin-left: 5px;
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.5rem;
+        }
+        input[type='radio'] {
+            margin: 0.4rem;
+        }
+        input[type='submit'] {
+            cursor: pointer;
+        }
+        .input-element {
+            margin: 0.3rem;
+            padding: 0.6rem 0.8rem ;
+            outline: none;
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            width: 100%;
+            max-width: 350px;
+            border-radius: 4px;
+        }
+        .wrapper {
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 2rem 0;
+            padding: 1rem;
+            
+            background-color: rgba(204, 204, 204, 0.2);
+            
+        }
+        .wrapper h3 {
+            text-align: center;
+        }
+        @media(min-width : 769px)
+        {
+            .image-section {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-local">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    <p>GetHome</p>
+                 </a>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./findhome.html">Find Home</a></li>
+                <li><a href="./aboutus.html">Aboutus</a></li>
+                <li><a href="./host.html">Host</a></li>
+                <li><a href="./Login.html">Login</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main-header-post">
+        
+        <div class="form-section">
+            <form class="form">
+                <h2>Edit Bio-Data</h2>
+                
+                <div class="wrapper">
+                    <div class="input-group">
+                        <label for="houseNumber" class="label">FirstName</label><br>
+                        <input class="input-element" type="text" name="houseNumber"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="lastname" class="label">LastName</label><br>
+                        <input class="input-element" type="text" name="lastname"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="mobile" class="label">Mobile</label><br>
+                        <input class="input-element" type="number" name="mobile"> 
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="profilepic" class="label">ProfilePic</label><br>
+                        <input class="input-element" type="file" name="profilepic">
+                    </div>
+                    <div class="input-group">
+                        <label for="village" class="label">village</label><br>
+                        <input class="input-element" type="text" name="village"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="mandal" class="label">Mandal</label><br>
+                        <input class="input-element" type="text" name="mandal"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="district" class="label">District</label><br>
+                        <input class="input-element" type="text" name="district"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="state" class="label">state</label><br>
+                        <input class="input-element" type="text" name="state"> 
+                    </div>
+                </div>
+               <input class="input-element" type="submit" name="submit" value="Update Bio" />    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

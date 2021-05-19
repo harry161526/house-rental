@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All users</title>
+    <style>
+        @import url('../styles/sidebar.css');
+        .users-container {
+            padding: 3rem 1rem;
+            width: 75%;
+            height: 100vh;
+            float: right;
+            overflow-y: scroll;
+        }
+        .users-container > h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <div class="imgbox">
+                <img src="../images/profile.png" alt="profile" />
+            </div>
+            <h3>Welcome Admin</h3>
+        </div>
+        <ul class="menu">
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="#">All Houses</a></li>
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Dashboard</a></li>
+        </ul>
+    </div>
+    <div class="users-container">
+        <h1>List of All Users</h1>
+    </div>
+</body>
+</html>

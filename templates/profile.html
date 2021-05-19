@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/03b769b230.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+        @import url('../styles/navbar.css');
+        @import url('../styles/footer.css');
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .usersection {
+            padding-top: 100px;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+        .usersection > h2{
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 38px;
+            color: rgba(0,0,0,0.7);
+        }
+        .usersection .profilewrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .usersection .profilewrapper .profilesection {
+            width: 40%;
+            max-width: 250px;
+            height: 100%;
+        }
+        .usersection .profilewrapper .profilesection img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .userdetailssection {
+            width: 60%;
+            max-width: 400px;
+            height: 100%;
+            border: 1px solid rgba(204,204,204,0.7);
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .userdetailssection > h3 {
+            color: rgba(0,0,0,0.7);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .userdetailssection h4 {
+            color: rgba(0,0,0,0.7);
+            font-weight: normal;
+            margin: 0.8rem 0;
+        }
+        .editbio {
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            outline: none;
+            border: 1px solid rgba(220,20,60,0.8);
+            background-color: crimson;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .postedhouseswrapper,
+        .requestedhouseswrapper {
+            width: 100%;
+            max-width: 1500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4rem;
+            min-height: 500px;
+            padding: 1.5rem 1rem;
+        }
+        .postedhouseswrapper h2,
+        .requestedhouseswrapper h2 {
+            font-weight: normal;
+            font-size: 38px;
+            color: rgba(0,0,0,0.7);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .postedhouseswrapper .postedhouses,
+        .requestedhouseswrapper .requestedhouses {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .swiper-slide {
+            width: 300px;
+            height: 350px;
+            background-color: #fff;
+            padding: 0.8rem 0.3rem;
+            transition: 0.5s ease-in-out;
+            border-radius: 5px;
+            margin: 15px 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0,0.1);
+            background : linear-gradient(-45deg,rgba(0,0,0,0.2) 10%,rgba(0,0,0,0.0) 90%);
+            box-shadow: 0px 6px 20px 5px rgba(0, 0, 0,0.2);
+        }
+/* .swiper-slide:hover {
+    height: 370px;
+    width: 330px;
+    cursor: pointer;
+} */
+        .swiper-slide .imgbox {
+            position: relative;
+            /* top: -30%;
+            left: 4%; */
+            width: 90%;
+            height: 200px;
+            position: relative;
+            z-index: 1;
+            transition: 0.3s ease-in-out;
+            overflow-y: hidden;
+        }
+
+        .swiper-slide .imgbox img {
+            position: absolute;
+            top: 2%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .swiper-slide .content {
+            width: 100%;
+            height: 130px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .swiper-slide .houseoperation {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .swiper-slide .button {
+            padding: 0.5rem 0.8rem;
+            background-color: crimson;
+            color: #fff;
+            border-radius: 4px;
+            margin: 0 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-local">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    <p>GetHome</p>
+                 </a>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./findhome.html">Find Home</a></li>
+                <li><a href="./aboutus.html">Aboutus</a></li>
+                <li><a href="./host.html">Host</a></li>
+                <li><a href="./Login.html">Login</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <section class="usersection">
+        <h2>User Profile</h2>
+        <div class="profilewrapper">
+            <div class="profilesection">
+                <img src="../images/male_avatar.png" alt="avatar" />
+            </div>
+            <div class="userdetailssection">
+                <h3>User Details</h3>
+                <div>   
+                    <h4>Username : harry</h4>
+                    <h4>Email : haribodicharla2233@gmail.com</h4>
+                    <h4>FirstName : jayahari</h4>
+                    <h4>LastName : bodicharla</h4>
+                    <h4>Mobile : 9876543210</h4>
+                    <h4>Address : some address goes here</h4>
+                </div>
+                <a href="./Editbio.html" class="editbio">Edit Bio</a>
+            </div>
+        </div>  
+    </section>
+    <section class="postedhouseswrapper">
+        <h2>Posted Houses</h2>
+        <div class="postedhouses">
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhomebyowner.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Remove</a>
+                    <a href="./updatepostedhouse.html" class="button">Update</a>
+                </div>
+                
+              </div>
+              <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhomebyowner.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Remove</a>
+                    <a href="./updatepostedhouse.html" class="button">Update</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhomebyowner.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Remove</a>
+                    <a href="./updatepostedhouse.html" class="button">Update</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhomebyowner.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Remove</a>
+                    <a href="./updatepostedhouse.html" class="button">Update</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhomebyowner.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Remove</a>
+                    <a href="./updatepostedhouse.html" class="button">Update</a>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section class="requestedhouseswrapper">
+        <h2>Requested Houses</h2>
+        <div class="requestedhouses">
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhome.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Cancel Request</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhome.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Cancel Request</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhome.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Cancel Request</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="../images/pexels-binyamin-mellish-1396132.jpg" alt="house">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        good morning<br>
+                        good afternoon<br>
+                        good night<br>
+                    </div>
+                    <div class="right">
+                        hello<br>
+                        nice to meet you<br>
+                        bye<br>
+                    </div>
+                </div>   
+                <div class="houseoperations">
+                    <a href="./viewhome.html" class="button">View</a>
+                    <a href="./viewhome.html" class="button">Cancel Request</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer_content">
+                 <div class="about">
+                     <h3>About</h3>
+                     <ul>
+                         <li><a href="#">How GetHome works</a></li>
+                         <li><a href="#">Newsroom</a></li>
+                         <li><a href="#">Careers</a></li>
+                         <li><a href="#">Blog</a></li>
+                         <li><a href="#">Contactus</a></li>
+                     </ul>
+                 </div>
+                 <div class="about">
+                     <h3>About</h3>
+                     <ul>
+                         <li><a href="#">How GetHome works</a></li>
+                         <li><a href="#">Newsroom</a></li>
+                         <li><a href="#">Careers</a></li>
+                         <li><a href="#">Blog</a></li>
+                         <li><a href="#">Contactus</a></li>
+                     </ul>
+                 </div>
+               
+                 
+            </div>
+            <div class="footer_copyrights">
+                 <p>&#169; 2020 GetHome, Inc. All rights reserved</p>
+                 <p>| <span><a href="#">Privacy</a></span>  | <span><a href="#">Terms</a></span>  | <span><a href="#">Sitemap</a></span>  |</p>
+                 <div class="social_icons">
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                     <a href="#"><i class="fab fa-facebook"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

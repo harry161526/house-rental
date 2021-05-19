@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+    <script src="https://use.fontawesome.com/03b769b230.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        @import url('../styles/navbar.css');
+        @import url('../styles/footer.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .navbar-local {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        section {
+            margin-top: 120px;
+            padding: 0 3rem;
+        }
+        .main-heading {
+            width: 100%;
+            border: 1px solid rgb(223, 220, 220);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            box-shadow: 0 8px 50px 5px rgb(223, 220, 220,0.7);
+        }
+        .main-heading .adress-block {
+            width: auto;
+        }
+        .main-heading .adress-block h3 {
+            font-size: 30px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #252b28;
+            opacity: 0.9;
+        }
+        .main-heading .adress-block p {
+            color: #252b28;
+            opacity: 0.7;
+        }
+        .main-heading .price-block h4 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #252b28;
+            opacity: 0.9;
+        }
+        .main-heading .price-block p {
+            color: #252b28;
+            opacity: 0.7;
+        }
+        .card-slider {
+            width: 90%;
+            margin: auto;
+            padding: 1rem 0;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .slide img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            position: relative;
+        }
+
+        .overview {
+            border: 1px solid lightgrey;
+            padding: 1rem;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+        .overview h2 {
+            text-align: center;
+        }
+        .features {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .featurewrapper {
+            display: flex;
+            margin: 16px;
+            justify-content: space-around;
+        }
+        .feature {
+            width: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature h5 {
+            display: flex;
+            font-size: 16px;
+            font-weight: 600;
+            color:#252b28;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+        .feature > span {
+            text-align: center;
+        }
+
+        .locality {
+            width: 800px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 1rem;
+            z-index: 1;
+        }
+        .locality h2 {
+            margin-bottom: 1rem;
+        }
+        #mapid {
+            width: 800px;
+            height: 400px;
+            z-index:0;
+        }
+        .requestscontainer {
+            width: 100%;
+            max-width: 600px;
+            margin: 1rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+        table,tr,td,th {
+            border: 1px solid rgba(37, 43, 40,0.4);
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td,th {
+            padding: 0.7rem 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-local">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    <p>GetHome</p>
+                 </a>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./findhome.html">Find Home</a></li>
+                <li><a href="./aboutus.html">Aboutus</a></li>
+                <li><a href="./host.html">Host</a></li>
+                <li><a href="./Login.html">Login</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div>
+    <section>
+        <div class="main-heading">
+            <div class="adress-block">
+                <h3>2BHK Independent House</h3>
+                <p>megahills,madhapur,Hyderabad</p>
+            </div>
+            <div class="price-block">
+                <h4>12,000 <span>per month</span></h4>
+                <p>1220 sq.ft</p>
+            </div>
+        </div>
+        <div class="card-slider">
+            <div class="slide">
+                <img  src="../images/findhome_image.jpg" alt="home-image" />
+                <img  src="../images/findhome_image2.jpg" alt="home-image" />
+                <img  src="../images/pexels-binyamin-mellish-1396132.jpg" alt="home-image" />
+            </div>   
+        </div>
+        <div class="overview">
+            <h2>Overview</h2>
+            <div class="features">
+                <div class="featurewrapper">
+                    <div class="feature">
+                        <h5>Price</h5>
+                        <span><i class="fas fa-rupee-sign"></i> 3500</span>
+                    </div>
+                    <div class="feature">
+                        <h5>Bedrooms</h5>
+                        <span>2</span>
+                    </div>
+                </div>
+               <div class="featurewrapper">
+                    <div class="feature">
+                        <h5>Bathrooms</h5>
+                        <span>2</span>
+                    </div>
+                    <div class="feature">
+                        <h5>2 wheeler parking</h5>
+                        <span>Available</span>
+                    </div>
+               </div>
+                <div class="featurewrapper">
+                    <div class="feature">
+                        <h5>4 wheeler parking</h5>
+                        <span>Avaialble</span>
+                    </div>
+                    <div class="feature">
+                        <h5>Balcony</h5>
+                        <span>Available</span>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="locality">
+            <h2>Location</h2>
+            <div id="mapid">
+
+            </div>
+        </div>
+        <div class="requestscontainer">
+            <h3>All Requests</h3>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hari</td>
+                        <td>haribodicharla2233@gmail.com</td>
+                        <td>9491621613</td>
+                    </tr>
+                    <tr>
+                        <td>Hari</td>
+                        <td>haribodicharla2233@gmail.com</td>
+                        <td>9491621613</td>
+                    </tr> 
+                    <tr>
+                        <td>Hari</td>
+                        <td>haribodicharla2233@gmail.com</td>
+                        <td>9491621613</td>
+                    </tr>
+                    <tr>
+                        <td>Hari</td>
+                        <td>haribodicharla2233@gmail.com</td>
+                        <td>9491621613</td>
+                    </tr>    
+                    <tr>
+                        <td>Hari</td>
+                        <td>haribodicharla2233@gmail.com</td>
+                        <td>9491621613</td>
+                    </tr>         
+                </tbody>
+            </table>
+        </div>
+    </section>    
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer_content">
+                 <div class="about">
+                     <h3>About</h3>
+                     <ul>
+                         <li><a href="#">How GetHome works</a></li>
+                         <li><a href="#">Newsroom</a></li>
+                         <li><a href="#">Careers</a></li>
+                         <li><a href="#">Blog</a></li>
+                         <li><a href="#">Contactus</a></li>
+                     </ul>
+                 </div>
+                 <div class="about">
+                     <h3>About</h3>
+                     <ul>
+                         <li><a href="#">How GetHome works</a></li>
+                         <li><a href="#">Newsroom</a></li>
+                         <li><a href="#">Careers</a></li>
+                         <li><a href="#">Blog</a></li>
+                         <li><a href="#">Contactus</a></li>
+                     </ul>
+                 </div>
+               
+                 
+            </div>
+            <div class="footer_copyrights">
+                 <p>&#169; 2020 GetHome, Inc. All rights reserved</p>
+                 <p>| <span><a href="#">Privacy</a></span>  | <span><a href="#">Terms</a></span>  | <span><a href="#">Sitemap</a></span>  |</p>
+                 <div class="social_icons">
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                     <a href="#"><i class="fab fa-facebook"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/navbar.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+    </script>
+    <script>
+        var mymap = L.map('mapid').setView([14.2217557,79.135305], 15);
+        const attribution = '&copy; <a href="www.google.com">openstreetmap</a>';
+       const tileurl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+       const tile = L.tileLayer(tileurl,{attribution});
+       tile.addTo(mymap);
+       L.marker([14.2217557,79.135305]).addTo(mymap);
+    </script>
+</body>
+</html>

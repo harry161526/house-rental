@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+       @import url('../styles/sidebar.css');
+        .dashboard-container {
+            float: right;
+            width: 70%;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .dashboard-item {
+            width: 250px;
+            height: 140px;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .dashboard-item h2 {
+            height: 75%;
+            text-align: center;
+            color: #fff;
+            line-height: 100px;
+            font-size: 38px;
+            border-bottom: 2px solid #fff;
+        }
+        .dashboard-item h3 {
+            height: 25%;
+            text-align: center;
+            line-height: 33px;
+            color: #fff;
+
+        }
+        .red {
+            background-color: crimson;
+        }
+        .green {
+            background-color: rgb(0, 128, 0,0.7);
+        }
+        .yellow {
+            background-color: rgb(0, 153, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <div class="imgbox">
+                <img src="../images/profile.png" alt="profile" />
+            </div>
+            <h3>Welcome Admin</h3>
+        </div>
+        <ul class="menu">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="./AllHouses.html">All Houses</a></li>
+                <li><a href="./Allusers.html">All Users</a></li>
+                <li><a href="#">Dashboard</a></li>
+        </ul>
+    </div>
+    <div class="dashboard-container">
+        <div class="dashboard-item red">
+            <h2>Count</h2>
+            <h3>No.of Houses</h3>
+        </div>
+        <div class="dashboard-item green">
+            <h2>Count</h2>
+            <h3>No.of Users</h3>
+        </div>
+        <div class="dashboard-item yellow">
+            <h2>Count</h2>
+            <h3>No.of Hosts</h3>
+        </div>
+        <div class="dashboard-item red">
+            <h2>Count</h2>
+            <h3>No.of Houses</h3>
+        </div>
+        
+    </div>
+</body>
+</html>

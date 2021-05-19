@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('../styles/sidebar.css');
+        .table-container {
+            padding: 3rem 1rem;
+            width: 75%;
+            height: 100vh;
+            float: right;
+            overflow-y: scroll;
+        }
+        .table-container > h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 32px;
+        }
+        .table {
+            width: 100%;
+        }
+        .table,th,td {
+            border-collapse: collapse;
+            border: 1px solid rgba(0,0,0);
+            text-align: center;
+        }
+        td,th {
+            padding: 0.3rem 0.2rem;
+        }
+          
+        a {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <div class="imgbox">
+                <img src="../images/profile.png" alt="profile" />
+            </div>
+            <h3>Welcome Admin</h3>
+        </div>
+        <ul class="menu">
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li class="active"><a href="#">All Houses</a></li>
+                <li><a href="./Allusers.html">All Users</a></li>
+                <li><a href="#">Dashboard</a></li>
+        </ul>
+    </div>
+    <div class="table-container">
+        <h1>List of All Homes</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>house Type</th>
+                    <th>House owner</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>view home</th>
+                    <th> change approve</th>
+                    <th>Delete</th>
+            </thead>
+            <tbody class="table-body">
+                <script>
+                    let body = document.querySelector('.table-body')
+                    let result = "";
+                    let row = "<tr><td>1</td><td>Independent House</td><td>srinivas</td><td>6/234,road no.7,punjagutta,hyderabad</td>"+
+                               "<td>verified</td><td><a href='#'>view home</a></td><td><a href='#'>approve</a></td><td><a href='#'>Delete</a></td></tr>";
+                    for(let i=0;i<30;i++) { 
+                        result+=row;
+                    }
+                    body.innerHTML=result;
+                </script>
+            </tbody>  
+                </tr class="row">
+                </tr>
+            
+        </table>
+    </div>
+</body>
+</html>
