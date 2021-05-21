@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('../styles/sidebar.css');
+        @import url('../../styles/posthouse.css');
+        .main-header-post {
+           
+            padding:0 1rem;
+            width: 75%;
+            height: 100vh;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type='submit'] {
+            background-color: crimson;
+            color: #fff;
+            border: 1px solid rgba(220,20,60,0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <div class="imgbox">
+                <img src="../images/profile.png" alt="profile" />
+            </div>
+            <h3>Welcome Admin</h3>
+        </div>
+        <ul class="menu">
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./AllHouses.html">All Houses</a></li>
+                <li class="active"><a href="./AddHouse.html">Add House</a></li>
+                <li><a href="./Allusers.html">All users</a></li>
+                <li><a href="./AddUser.html">Add User</a></li>
+                <li><a href="#">All Requests</a></li>
+        </ul>
+    </div>
+    <div class="main-header-post">
+        <div class="form-section">
+            <form class="form">
+                <h2>Post Your Home</h2>
+                <div class="wrapper">
+                    <h3>House Details</h3>
+                    <div class="input-group">
+                        <p class="label">Type of House</p>
+                        <select name="house">
+                            <option>Independent House</option>
+                            <option>Pent House</option>
+                            <option>Romm</option>
+                            <option>Apartment</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="houseName" class="label">House Name</label><br>
+                        <input class="input-element" type="text" name="houseName" placeholder="optional..."> 
+                    </div>
+                    <div class="input-group">
+                        <label for="houseprice" class="label">House Price</label><br>
+                        <input class="input-element" type="number" name="houseprice"  > 
+                    </div>
+                    <div class="input-group">
+                        <label for="housearea" class="label">House Area (in sq.ft)</label><br>
+                        <input class="input-element" type="number" name="housearea" > 
+                    </div>
+                    <div class="input-group">
+                        <label for="houseage" class="label">House Age</label><br>
+                        <input class="input-element" type="text" name="houseage" placeholder="like 2 years 6 months..." > 
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <h3>Address</h3>
+                    <div class="input-group">
+                        <label for="houseNumber" class="label">H/No</label><br>
+                        <input class="input-element" type="text" name="houseNumber" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="streetName" class="label">Street</label><br>
+                        <input class="input-element" type="text" name="streetName" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="locale" class="label">village/town/city</label><br>
+                        <input class="input-element" type="text" name="locale" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="mandal" class="label">Mandal</label><br>
+                        <input class="input-element" type="text" name="mandal" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="district" class="label">District</label><br>
+                        <input class="input-element" type="text" name="district" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="state" class="label">state</label><br>
+                        <input class="input-element" type="text" name="state" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="pincode" class="label">pincode</label><br>
+                        <input class="input-element" type="text" name="pincode" required> 
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <h3>Map Location</h3>
+                    <div class="input-group">
+                        <label for="latitude" class="label">Latitude</label><br>
+                        <input class="input-element" type="text" name="latitude" required> 
+                    </div>
+                    <div class="input-group">
+                        <label for="longitude" class="label">Longitude</label><br>
+                        <input class="input-element" type="text" name="logitude" required> 
+                    </div>
+                </div>
+               
+                
+                <div class="wrapper">
+                    <h3>House Images</h3>
+                    <div class="input-group">
+                        <label for="images" class="label">House Images (3 images are required(outsideview,main entrance and innerview))</label><br>
+                        <input class="input-element" type="file" name="image-1" required><br>
+                        <input class="input-element" type="file" name="image-1" required><br>
+                        <input class="input-element" type="file" name="image-1" required><br>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <h3>House Facilities</h3>
+                    <div class="input-group">
+                        <p class="label">No of Bedrooms</p>
+                       <select>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                       </select>
+                    </div>
+                    <div class="input-group">
+                        <p class="label">No of Bathrooms</p>
+                        <select>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <p class="label">Is Balcony available ?</p>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <p class="label">Is Parking available for two wheeler?</p>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <p class="label">Is Parking available for four wheeler(upto car only)?</p>
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                    <input class="input-element" type="submit" name="submit" value="Post House" />    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

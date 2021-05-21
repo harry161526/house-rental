@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('../styles/sidebar.css');
+        .form-section {
+            padding: 1rem 4rem;
+            width: 75%;
+            height: 100vh;
+            float: right;
+            overflow-y: scroll;
+        }
+        .form-section .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            border-radius: 8px;
+            background-color: rgba(204, 204, 204, 0.1);
+            padding: 1rem 0.5rem;
+            color: rgba(0, 0, 0, 0.8);
+            margin: 30px auto;
+        }
+        select {
+            width: 200px;
+            padding: 0.5rem 0.7rem;
+            outline: none;
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            background: #fff;
+            margin-left: 5px;
+        }
+        .input-group {
+            width: 80%;
+            margin: 0.3rem 0;
+            padding: 0.2rem;
+        }
+        .label {
+            font-size: 1.1rem;
+            margin-left: 5px;
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.5rem;
+        }
+        input[type='radio'] {
+            margin: 0.4rem;
+        }
+        input[type='submit'] {
+            cursor: pointer;
+            background-color: crimson;
+            color: #fff;
+            font-weight: 500;
+            border: 1px solid rgba(220,20,60,0.8);
+        }
+        .input-element {
+            margin: 0.3rem;
+            padding: 0.6rem 0.8rem ;
+            outline: none;
+            border: 1px solid rgba(204, 204, 204, 0.7);
+            width: 100%;
+            max-width: 350px;
+            border-radius: 4px;
+        }
+        .wrapper {
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 2rem 0;
+            padding: 1rem;
+            
+            background-color: rgba(204, 204, 204, 0.2);
+            
+        }
+        .wrapper h3 {
+            text-align: center;
+        }
+        @media(min-width : 769px)
+        {
+            .image-section {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <div class="imgbox">
+                <img src="../images/profile.png" alt="profile" />
+            </div>
+            <h3>Welcome Admin</h3>
+        </div>
+        <ul class="menu">
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./AllHouses.html">All Houses</a></li>
+                <li><a href="./AddHouse.html">Add House</a></li>
+                <li><a href="./Allusers.html">All users</a></li>
+                <li class="active"><a href="./AddUser.html">Add User</a></li>
+                <li><a href="./AllRequests.html">All Requests</a></li>
+        </ul>
+    </div>
+    <div class="form-section">
+        <form class="form">
+            <h2>Add User</h2>
+            <div class="wrapper">
+                <h3>User Details</h3>
+                <div class="input-group">
+                    <label for="username" class="label">Username</label><br>
+                    <input class="input-element" type="text" name="username" placeholder="username"> 
+                </div>
+                <div class="input-group">
+                    <label for="email" class="label">Email ID</label>
+                    <input class="input-element" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <label for="password" class="label">Password</label><br>
+                    <input class="input-element" type="password" name="password" placeholder="password" > 
+                </div>
+                <div class="input-group">
+                    <label for="confirmpassword" class="label">Confirm Password</label><br>
+                    <input class="input-element" type="password" name="confirmpassword" placeholder="password" > 
+                </div>
+            </div>
+            <input class="input-element" type="submit" name="submit" value="Add User" />    
+        </form>
+    </div>
+</div>
+</body>
+</html>
